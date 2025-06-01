@@ -1,3 +1,6 @@
+/**
+ * Добавления билета в listTicket
+ */
 fun addTicket(listTicket: MutableList<Any>) {
     println("Введите данные, для покупки билета:")
     print("Имя -> ")
@@ -35,6 +38,10 @@ fun addTicket(listTicket: MutableList<Any>) {
     println("Ваш билет добавлен в раздел -> Мои!")
 }
 
+
+/**
+ * Выводит билеты, добавленные в listTicket
+ */
 fun myTicket(listTicket: MutableList<Any>) {
     if (listTicket.isEmpty()) {
         println("У вас нету билетов!")
