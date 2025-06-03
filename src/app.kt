@@ -1,3 +1,6 @@
+/**
+ * Start
+ */
 fun main() {
     val listTicket = mutableListOf<Any>()
     while (true) {

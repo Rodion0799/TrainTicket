@@ -6,16 +6,14 @@ fun addTicket(listTicket: MutableList<Any>) {
     print("Имя -> ")
     val userName = readLine()!!
     if (userName.isBlank()) {
-        println("Пустой ввод!")
-        return
+        throw IllegalArgumentException("Ошибка!")
     } else {
         listTicket.add(userName)
     }
     print("Возвраст -> ")
     val userAge = readLine()!!.toIntOrNull()
     if (userAge == null || userAge <= 0 || userAge > 95) {
-        println("Ошибка!")
-        return
+        throw IllegalArgumentException("Ошибка!")
     } else {
         listTicket.add(userAge)
     }
@@ -23,7 +21,7 @@ fun addTicket(listTicket: MutableList<Any>) {
     print("Город отправления -> ")
     val userDepartures = readLine()!!
     if (userDepartures.isBlank()) {
-        println("Пустой ввод!")
+        throw IllegalArgumentException("Ошибка!")
     } else {
         listTicket.add(userDepartures)
     }
@@ -31,7 +29,7 @@ fun addTicket(listTicket: MutableList<Any>) {
     print("Город прибытия -> ")
     val userArrival = readLine()!!
     if (userArrival.isBlank()) {
-        println("Пустой ввод!")
+        throw IllegalArgumentException("Ошибка!")
     } else {
         listTicket.add(userArrival)
     }
